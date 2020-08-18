@@ -1,0 +1,183 @@
+:root {
+	--blue: #0083c3;
+	--grey-bg: #e5e5e5;
+	--grey-writing: #747474;
+	--grey-light: #f3f3f3;
+	--black: #2e2e2e;
+	--radius: 10px;
+	--shadow: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.1));
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url('./assets/font/Inter-Medium-slnt=0.ttf') format('ttf');
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: var(--grey-bg);
+	font-family: 10px;
+	color: var(--black);
+}
+
+/* NAVIGATION TAB */
+
+nav {
+	height: 80px;
+	background-color: var(--blue);
+	display: flex;
+	padding: 0 1.5rem;
+}
+
+nav img {
+	align-self: center;
+	height: 50px;
+}
+
+/* HEADINGS */
+
+h1 {
+	font-weight: bold;
+	font-size: 45px;
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+	color: var(--black);
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 30px;
+	color: var(--black);
+}
+
+main {
+	padding: 4rem 2rem;
+	margin: 0 auto;
+	max-width: 1200px;
+	display: grid;
+	gap: 25px;
+}
+
+.add-book,
+table {
+	background: white;
+	border-radius: var(--radius);
+	filter: var(--shadow);
+}
+
+.add-book {
+	padding: 2rem;
+	display: grid;
+	gap: 10px;
+}
+
+/* FORM  */
+
+form {
+	display: grid;
+	align-items: end;
+	grid-template-columns: repeat(5, 3fr) auto;
+	gap: 20px;
+}
+
+input {
+	border: none;
+	box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+	background-color: var(--grey-light);
+	padding: 0.6rem 1rem;
+	width: 100%;
+	border-radius: 5px;
+	margin-top: 0.3rem;
+	font-size: 14px;
+}
+
+select {
+	border: none;
+	box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
+	background-color: var(--grey-light);
+	height: 2.25rem;
+	width: 100%;
+	border-radius: 5px;
+	color: var(--grey-writing);
+	margin-top: 0.3rem;
+	font-size: 14px;
+}
+
+label {
+	font-size: 11px;
+	line-height: 15px;
+	color: var(--black);
+}
+
+fieldset button {
+	border: none;
+	border-radius: 5px;
+	background-color: var(--blue);
+	color: white;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 0.6rem 2rem;
+	cursor: pointer;
+	filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.1));
+}
+
+fieldset button:hover {
+	filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+/* TABLE */
+
+table {
+	background: white;
+	display: grid;
+	overflow: scroll;
+}
+
+thead {
+	background: rgba(0, 127, 189, 0.03);
+	border-radius: 10px 10px 0px 0px;
+	text-transform: uppercase;
+	letter-spacing: 0.11em;
+	font-weight: 600;
+	color: var(--grey-writing);
+	font-size: 14px;
+}
+
+tbody {
+	display: grid;
+}
+
+th,
+td {
+	padding: 2rem 0.5rem;
+	align-self: center;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+tr {
+	display: grid;
+	justify-items: center;
+	grid-template-columns: 20% 20% 15% 15% 15% 15%;
+	border-bottom: 1px solid var(--grey-bg);
+	padding: 0 2rem;
+}
+
+tr button {
+	border: none;
+	background: none;
+	cursor: pointer;
+	padding: 0rem;
+}
+
+tr button:hover {
+	color: var(--grey-writing);
+}
+
+.left {
+	justify-self: left;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Onja Library</title>
+	</head>
+	<body>
+		<nav><img src="./assets/onja_logo_transparent.png" alt="Onja Logo" /></nav>
+		<main>
+			<h1>Library</h1>
+			<section class="add-book">
+				<h2>Add a book</h2>
+				<form>
+					<fieldset>
+						<label for="title">Book title</label>
+						<input type="text" id="title" name="title" placeholder="Title" required />
+					</fieldset>
+					<fieldset>
+						<label for="author">Book author</label>
+						<input type="text" id="author" placeholder="Author" required />
+					</fieldset>
+					<fieldset>
+						<label for="genre">Book genre</label>
+						<select name="genre" id="genre" required>
+							<option value="Fantasy">Fantasy</option>
+							<option value="Mystery">Mystery</option>
+							<option value="Thriller">Thriller</option>
+							<option value="Fiction">Fiction</option>
+							<option value="Design">Design</option>
+							<option value="Memoir">Memoir</option>
+							<option value="Other">Other</option>
+						</select>
+					</fieldset>
+					<fieldset>
+						<label for="pages">Book pages</label>
+						<input
+							type="number"
+							name="pages"
+							id="pages"
+							placeholder="Number of pages"
+							required
+						/>
+					</fieldset>
+					<fieldset>
+						<label for="read">Status</label>
+						<select name="read" id="read" required>
+							<option value="false" selected>Not read</option>
+							<option value="true">Read</option>
+						</select>
+					</fieldset>
+					<fieldset>
+						<button type="submit">Add</button>
+					</fieldset>
+				</form>
+			</section>
+			<section>
+				<table>
+					<thead>
+						<th class="left">Title</th>
+						<th>Author</th>
+						<th>Genre</th>
+						<th>Pages</th>
+						<th>Read</th>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</section>
+		</main>
+
+		<script src="script.js"></script>
+	</body>
+</html>
